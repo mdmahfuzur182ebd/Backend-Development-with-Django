@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form bullding in Html File </title>
+    <!-- <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"> -->
+  </head>
+
+
+
+  <body>
+       <!-- {{ heading }}
+       <hr> -->
+
+    <!-- <form class="" action="index.html" method="post">
+      <label for="user_name">First Name:</label>
+      <input type="text" name="user_name" value="" required placeholder="Enter your Name"><br><br>
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" value=""><br><br>
+      <label for="email">Email:</label>
+      <input type="Email" name="email" value=""><br><br>
+      <input type="submit" name="" value="Submit">
+
+    </form> -->
+
+    <h4>{{heading}}</h4>
+    <form class="" action="" method="Post">
+      {{new_form.as_p}}
+       {% csrf_token %}
+
+      <input type="submit" name="" value="Submit">
+
+    </form>
+
+    <hr>
+    {% if form_submited  %}
+      <p>First Name: {{first_name}}</p>
+      <p>Last Name : {{last_name}}</p>
+      <p>Dob : {{dob}}</p>
+      <p>Email : {{Email}}</p>
+
+    {% endif %}
+
+
+  </body>
+</html>
